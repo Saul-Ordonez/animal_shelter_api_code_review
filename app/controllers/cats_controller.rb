@@ -26,9 +26,6 @@ class CatsController < ApplicationController
   end
 
   private
-  def json_response(object, status = :ok)
-    render json: object, status: status
-  end
 
   def cat_params
     params.permit(:name, :age, :sex, :bio)
