@@ -8,23 +8,25 @@
 
 
     20.times do |i|
-      dog = Dog.create!(
+      @dog = Dog.create!(
         name: Faker::Creature::Dog.name,
         age: Faker::Creature::Dog.age,
         sex: Faker::Creature::Dog.gender,
         size: Faker::Creature::Dog.size,
         bio: Faker::Creature::Dog.meme_phrase
       )
-      puts ""
+      @dog.save
+      puts "Created #{Dog.count} dogs!"
     end
 
 
     20.times do |i|
-      cat = Cat.create!(
+      @cat = Cat.create!(
         name: Faker::Creature::Cat.name,
         age: Faker::Creature::Dog.age,
         sex: Faker::Creature::Dog.gender,
         bio: Faker::Creature::Dog.meme_phrase
       )
-      puts ""
+      @cat.save
+      puts "Created #{Cat.count} cats!"
     end
