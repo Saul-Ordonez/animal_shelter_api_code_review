@@ -5,3 +5,27 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+    20.times do |i|
+      dog = Dog.create!(
+        name: Faker::Book.author,
+        age: Faker::Movie.quote,
+        sex: Faker::Book.author,
+        size: Faker::Movie.quote,
+        bio: Faker::Book.author
+      )
+      puts "Quote #{i}: Author is #{quote.author} and quotation is '#{quote.content}'."
+    end
+
+    puts ""
+
+    20.times do |i|
+      cat = Cat.create!(
+        name: Faker::Book.author,
+        age: Faker::Movie.quote,
+        sex: Faker::Book.author,
+        bio: Faker::Book.author
+      )
+      puts ""
+    end
