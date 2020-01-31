@@ -9,23 +9,22 @@
 
     20.times do |i|
       dog = Dog.create!(
-        name: Faker::Book.author,
-        age: Faker::Movie.quote,
-        sex: Faker::Book.author,
-        size: Faker::Movie.quote,
-        bio: Faker::Book.author
+        name: Faker::Creature::Dog.name,
+        age: Faker::Creature::Dog.age,
+        sex: Faker::Creature::Dog.gender,
+        size: Faker::Creature::Dog.size,
+        bio: Faker::Creature::Dog.meme_phrase
       )
-      puts "Quote #{i}: Author is #{quote.author} and quotation is '#{quote.content}'."
+      puts ""
     end
 
-    puts ""
 
     20.times do |i|
       cat = Cat.create!(
-        name: Faker::Book.author,
-        age: Faker::Movie.quote,
-        sex: Faker::Book.author,
-        bio: Faker::Book.author
+        name: Faker::Creature::Cat.name,
+        age: Faker::Creature::Dog.age,
+        sex: Faker::Creature::Dog.gender,
+        bio: Faker::Creature::Dog.meme_phrase
       )
       puts ""
     end
