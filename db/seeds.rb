@@ -11,10 +11,11 @@ class Seed
   def self.begin
     seed = Seed.new
     seed.generate_dogs
+    seed.generate_cats
   end
 
   def generate_dogs
-    1.times do
+    1.times do |i|
       dog1 = Dog.create!(name: 'Fido', age: '7', sex: 'Male', size: 'Medium', bio: 'Very cuddly')
       dog2 = Dog.create!(name: 'Iroh', age: '3', sex: 'Male', size: 'Large', bio: 'Oh the drama of life')
       dog3 = Dog.create!(name: 'Snoopy', age: '7', sex: 'Male', size: 'Small', bio: 'Build me a doghouse')
@@ -35,13 +36,14 @@ class Seed
       dog18 = Dog.create!(name: 'Zuko', age: '2', sex: 'Male', size: 'Medium', bio: 'Baby Yoda, baby baby Yoda')
       dog19 = Dog.create!(name: 'Peanutbutter Cup', age: '4', sex: 'Male', size: 'Small', bio: 'Break me off a piece of that Kit-Kat bar')
       dog20 = Dog.create!(name: 'Cocopuff', age: '8', sex: 'Male', size: 'Large', bio: "I'm cookoo for chopped liver")
+      puts "success for dogs"
     end
   end
 
-  def self.begin
-    seed = Seed.new
-    seed.generate_cats
-  end
+  # def self.begin
+  #   seed = Seed.new
+  #   seed.generate_cats
+  # end
 
   def generate_cats
     1.times do
@@ -65,10 +67,12 @@ class Seed
       cat18 = Cat.create!(name: 'Mr. Smith', age: '2', sex: 'Male', bio: "Just lookin' for my misses")
       cat19 = Cat.create!(name: 'Tupac', age: '4', sex: 'Male', bio: 'Cold-blooded')
       cat20 = Cat.create!(name: 'Sadie', age: '8', sex: 'Female', bio: "Seeking new digs, I couldn't afford the rent")
+      puts 'Success for cats'
     end
   end
 
 end
+Seed.begin
 
 
 # 20.times do |i|
